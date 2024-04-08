@@ -1,3 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
 img {
     width: 100%;
+    
 }
+
+body {
+    font-family: poppins, sans-serif;
+    margin: auto 0;
+}
+
+header {
+    max-width: 1200px;
+    padding: 1em 1.5em;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header div img {
+    width: 30%;
+    
+}
+
+nav ul li {
+    display: inline-block;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-size: 1.500rem;
+    padding: 0 0 0 .7em;
+}
+
+ nav a:link,
+ nav a:visited {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.products {
+    padding: 0 1.5em;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(4, 2fr);
+    gap: 1em;
+    
+    grid-template-areas: 
+    "block1 block1 block1"
+    "block1 block1 block1"
+    "block1 block1 block1"
+    "block2 block3 block4";
+}
+
+.products .block:nth-child(1) {
+    grid-area: block1;   
+}
+
+.products .block:nth-child(2) {
+    grid-area: block2;  
+}
+
+.products .block:nth-child(3) {
+    grid-area: block3; 
+}
+
+.products .block:nth-child(4) {
+    grid-area: block4; 
+}
+
+.products img {
+    border-radius: 8px;
+}
+
+.sweetheart {
+    padding: 1em 1.5em;
+}
+
+h1 {
+    font-size: 2.027rem;
+    font-weight: 500;
+    margin-bottom: .5em;
+}
+
+.limited {
+    margin: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.red {
+    margin: 0;
+}
+
+.btn {
+    display: inline-block;
+    font-size: .7rem;
+    font-weight: 600;
+    color: white;
+    background-color: black;
+    border: 6px solid black;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 0 .5em;
+}
+
+.behind {
+    padding: 1em 1.5em;
+    background-color: #f8fafc;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.802rem;
+    text-align: center;
+}
+
+.people {
+    color: white;
+    background-color: black;
+    padding: 1em 1.5em 4em;
+}
+
+.try {
+    padding: 1em 1.5em;
+}
+
+.try-article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.try article img {
+    width: 60%;
+    border-radius: 8px;
+}
+
+.try article {
+    text-align: center;
+}
+
+
