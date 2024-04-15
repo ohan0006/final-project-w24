@@ -14,7 +14,7 @@ body {
 
 header {
     max-width: 1200px;
-    padding: 1em 1.5em;
+    padding: .5em 1.5em;
 }
 
 .navigation {
@@ -33,7 +33,7 @@ nav ul li {
     display: inline-block;
     justify-content: space-between;
     text-transform: uppercase;
-    font-size: 1.500rem;
+    font-size: 1rem;
     padding: 0 0 0 .7em;
 }
 
@@ -44,18 +44,23 @@ nav ul li {
     font-weight: 500;
 }
 
+.intro {
+    max-width: 1200px;
+}
+
 .products {
     padding: 0 1.5em;
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    grid-template-rows: repeat(4, 2fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     gap: 1em;
     
     grid-template-areas: 
-    "block1 block1 block1"
-    "block1 block1 block1"
-    "block1 block1 block1"
-    "block2 block3 block4";
+    "block1 block1 block1 block1 block1 block1"
+    "block1 block1 block1 block1 block1 block1"
+    "block1 block1 block1 block1 block1 block1"
+    "block2 block2 block3 block3 block4 block4";
+
 }
 
 .products .block:nth-child(1) {
@@ -75,7 +80,7 @@ nav ul li {
 }
 
 .products img {
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 .sweetheart {
@@ -111,13 +116,19 @@ h1 {
     padding: 0 .5em;
 }
 
-.behind {
-    padding: 0 1.5em;
+#behind {
     background-color: #f8fafc;
-    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-.behind .behind-group {
+.back-behind {
+    padding: 0 1.5em;
+    margin: 0;
+    max-width: 1200px;
+}
+
+#behind .behind-group {
     padding-top: 1em;
     padding-bottom: 3em;
     margin: 0;
@@ -130,33 +141,114 @@ h2 {
     padding-top: 1.5em;
 }
 
-.people {
+#people {
     color: white;
     background-color: black;
     padding: 0 1.5em ;
+    display: flex;
+    justify-content: center;
 }
 
-.people .people-group {
+#people .people-group {
     padding-top: 1em;
-    padding-bottom: 4em;
+    padding-bottom: 2em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 1200px;
 }
 
-.try {
-    padding: 1em 1.5em;
+#try {
+    padding: 0 1em;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
 }
 
 .try-article {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-.try article img {
-    width: 60%;
-    border-radius: 8px;
-}
-
-.try article {
+    padding: 2em 0;
     text-align: center;
 }
 
+.article-background {
+    background-color: #f8fafc;
+    margin: auto 0;
+    padding-bottom: .5em;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    width: 95%;
+   
+}
 
+.try-article img {
+    width: 95%;
+    margin: auto 0;
+    margin-top: 1em;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+}
+
+
+h3 {
+    font-size: 1.266rem;
+    margin: auto 0;
+    padding-top: 1em;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    font-size: .8rem;
+    text-align: center;
+    padding: 2em 0;
+}
+
+@media (min-width: 768px) {
+    .products {
+        grid-template-areas: 
+        "block1 block1 block1 block2 block2 block2"
+        "block1 block1 block1 block2 block2 block2"
+        "block3 block3 block3 block4 block4 block4"
+        "block3 block3 block3 block4 block4 block4";
+    }
+
+    .behind-group {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+    }
+
+    #people .people-group {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .try-article {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 960px) {
+    header div img {
+        width: 20%;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    .intro {
+        display: flex;
+        padding-bottom: 4em;
+    }
+
+    .sweetheart {
+        padding: 0;
+    }
+
+}
